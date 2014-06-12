@@ -7,6 +7,22 @@ All of the scripts you will need to complete this lab as well as the sample data
 If you would like a quick primer on basic linux commands try [these 10 minute](http://software-carpentry.org/v4/shell/index.html) lessons from Software Carpentry. To learn to start using Beocat and begin using the terminal go to https://github.com/i5K-KINBRE-script-share/FAQ/blob/master/UsingBeocat.md. Learn how to download files from Beocat at https://github.com/i5K-KINBRE-script-share/FAQ/blob/master/BeocatEditingTransferingFiles.md.
 
 #### Part 1:
+Retrieve files from my directory for personal use.
+
+```
+ln -s /homes/sliefert/Summarize_Bam_Example/Sort.bam ~/Your_folder/
+```
+
+The ~/ is a [relative path](http://www.physics.utah.edu/~detar/lessons/unix_intro/unix_intro/node2.html), the equivalent is your home directory. 
+
+Let's create one more symbolic link, we'll need it for the excercises below.
+
+```
+ln -s /homes/sliefert/Summarize_Bam_Example/acceptedHits.bam ~/Your_folder/
+```
+[More reading on symbolic links.](http://www.cyberciti.biz/faq/unix-creating-symbolic-link-ln-command/)
+
+#### Part 2:
 Concatenate BAM or SAM files using the samtools cat tool. 
 Here is a usage statement for `samtools cat`
 ```
@@ -42,7 +58,7 @@ A space separated the list of the bam files you want to merge, USE THEIR FULL PA
 Additional reading on samtools can be found [here](http://samtools.sourceforge.net/samtools.shtml).
 
 
-#### Part 2:
+#### Part 3:
 Now, we use samtools flagstat to summarize alignments metrics.
 
 ```
